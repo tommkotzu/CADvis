@@ -161,7 +161,7 @@ a:hover { color: var(--color-accent-600); text-decoration: underline; }
 }
 .hero-actions .btn { padding: 11px 22px; font-size: 16px; }
 .hero-actions > a:not(.btn) { font-size: 16px; }
-.hero-media { margin: 56px auto 0; max-width: 1320px; padding: 0 var(--gutter); box-sizing: content-box; }
+.hero-media { margin: 56px auto; max-width: 1320px; padding: 0 var(--gutter); box-sizing: content-box; }
 .hero-media video {
   width: 100%; aspect-ratio: 16 / 9; object-fit: cover;
   border-radius: var(--radius-xl); background: var(--ground-pcb);
