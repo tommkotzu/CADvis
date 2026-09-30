@@ -1,5 +1,7 @@
 # CAD-Vis Website
 
+**Live site: https://tommkotzu.github.io/CADvis/**
+
 One-page site for CAD-Vis (3D-Visualisierung für Maschinenbau & Elektronik), built from the Claude Design handoff "Website v3".
 
 Static HTML/CSS/JS, with no build step and no dependencies apart from the Inter font on Google Fonts.
@@ -21,9 +23,9 @@ python3 -m http.server 8000   # then open http://localhost:8000
 ## Publish on GitHub Pages
 
 1. Create an empty repository on github.com (e.g. `CADvis`).
-2. Push this folder: `git remote add origin https://github.com/<user>/CADvis.git && git push -u origin main`
+2. Push this folder: `git remote add origin https://github.com/tommkotzu/CADvis.git && git push -u origin main`
 3. On GitHub: Settings → Pages → Source "Deploy from a branch" → Branch `main`, folder `/ (root)` → Save.
-4. After a minute the site is live at `https://<user>.github.io/CADvis/`.
+4. After a minute the site is live at `https://tommkotzu.github.io/CADvis/`.
 
 All paths are relative, so the site works under the `/CADvis/` sub-path without changes. `.nojekyll` tells Pages to serve the files as-is.
 
