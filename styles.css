@@ -97,12 +97,13 @@ a:hover { color: var(--color-accent-600); text-decoration: underline; }
   display: inline-flex; align-items: center; justify-content: center; gap: 6px;
   cursor: pointer; text-decoration: none; white-space: nowrap;
   font-family: var(--font-heading); font-weight: var(--font-heading-weight);
-  line-height: 1.2; background: transparent;
-  border: 1px solid var(--color-accent); color: var(--color-accent);
+  line-height: 1.2; background: var(--color-accent);
+  border: 1px solid var(--color-accent); color: #fff;
+  transition: background-color 0.2s, border-color 0.2s;
   border-radius: var(--radius-pill);
 }
-.btn:hover { color: var(--color-accent); text-decoration: none; background: color-mix(in srgb, var(--color-accent) 12%, transparent); }
-.btn:active { background: color-mix(in srgb, var(--color-accent) 22%, transparent); }
+.btn:hover { color: #fff; text-decoration: none; background: var(--color-accent-700); border-color: var(--color-accent-700); }
+.btn:active { background: color-mix(in srgb, var(--color-accent-700) 85%, #000); }
 
 .tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 20px; }
 .tags.center { justify-content: center; }
@@ -133,15 +134,15 @@ a:hover { color: var(--color-accent-600); text-decoration: underline; }
 .nav a:not(.nav-brand) { color: inherit; font-size: 13px; }
 .nav a:not(.nav-brand):hover { color: var(--color-accent); }
 .nav .btn { padding: 6px 16px; }
+.nav a.btn, .nav a.btn:hover { color: #fff; }
 
 /* Sticky CTA — appears once the hero is scrolled past */
 .sticky-cta {
   position: fixed; right: clamp(16px, 3vw, 32px); bottom: clamp(16px, 3vw, 32px); z-index: 20;
-  padding: 13px 22px; font-size: 15px; background: var(--color-bg);
+  padding: 13px 22px; font-size: 15px;
   box-shadow: 0 8px 24px color-mix(in srgb, #1d1d22 18%, transparent);
-  opacity: 0; pointer-events: none; transition: opacity 0.3s ease;
+  opacity: 0; pointer-events: none; transition: opacity 0.3s ease, background-color 0.2s, border-color 0.2s;
 }
-.sticky-cta:hover { background: color-mix(in srgb, var(--color-accent) 12%, var(--color-bg)); }
 .sticky-cta.is-visible { opacity: 1; pointer-events: auto; }
 
 /* Hero */
@@ -265,7 +266,6 @@ a:hover { color: var(--color-accent-600); text-decoration: underline; }
 .tier h3 { font-size: 22px; line-height: 1.2; letter-spacing: -0.015em; }
 .tier-desc { font-size: 15px; line-height: 24px; flex: 1; color: var(--text-muted); }
 .tier-price { font-size: 15px; font-weight: 500; margin-top: 8px; }
-.note { font-size: 13px; line-height: 20px; margin-top: 24px; text-align: center; color: var(--text-faint); }
 
 /* Process */
 .steps {
@@ -347,3 +347,18 @@ textarea.input { min-height: 90px; resize: vertical; }
 .legal ul { padding-left: 20px; }
 .legal li { margin: 0 0 6px; }
 .legal strong { color: var(--color-text); font-weight: 500; }
+
+/* Scroll reveal — blocks fade in and rise slightly as they enter the viewport.
+   Only active when JS has set .motion on <html> (skipped for reduced motion). */
+.motion [data-reveal]:not([data-reveal="children"]),
+.motion [data-reveal="children"] > * {
+  opacity: 0; transform: translateY(24px);
+  transition: opacity 0.9s cubic-bezier(0.2, 0.7, 0.2, 1), transform 0.9s cubic-bezier(0.2, 0.7, 0.2, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+.motion [data-reveal].is-revealed,
+.motion [data-reveal="children"] > .is-revealed { opacity: 1; transform: none; }
+@media print {
+  .motion [data-reveal]:not([data-reveal="children"]),
+  .motion [data-reveal="children"] > * { opacity: 1; transform: none; }
+}

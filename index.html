@@ -7,13 +7,14 @@
 <meta name="description" content="Aus euren STEP- und CAD-Daten entstehen Renderings und Erklärvideos für Website, Messe und Vertrieb. Ohne Fotoshooting. Ohne Prototyp.">
 <meta name="theme-color" content="#fcfcfd">
 <link rel="stylesheet" href="styles.css">
+<script>if ('IntersectionObserver' in window && matchMedia('(prefers-reduced-motion: no-preference)').matches) document.documentElement.classList.add('motion');</script>
 <script src="main.js" defer></script>
 </head>
 <body>
 
 <nav class="nav" id="nav" aria-label="Hauptnavigation">
   <a href="#top" class="nav-brand">CAD-Vis</a>
-  <a href="#cases">Fallstudien</a>
+  <a href="#cases">Case Studies</a>
   <a href="#leistungen">Leistungen</a>
   <a href="#prozess">Prozess</a>
   <a href="#faq">FAQ</a>
@@ -24,22 +25,22 @@
 
 <main id="top">
 
-<section class="hero">
+<section class="hero" data-reveal="children">
   <p class="hero-kicker">3D-Visualisierung für Maschinenbau &amp; Elektronik</p>
   <h1>Kunden kaufen, was sie verstehen.</h1>
   <p class="hero-sub">Aus euren STEP- und CAD-Daten entstehen Renderings und Erklärvideos für Website, Messe und Vertrieb. Ohne Fotoshooting. Ohne Prototyp.</p>
   <div class="hero-actions">
     <a href="#kontakt" class="btn">Kostenlose Datenbewertung</a>
-    <a href="#cases">Fallstudien ansehen ›</a>
+    <a href="#cases">Case Studies ansehen ›</a>
   </div>
 </section>
 
-<figure class="hero-media">
+<figure class="hero-media" data-reveal>
   <video src="img/hero.mp4" poster="img/hero-poster.jpg" autoplay muted loop playsinline preload="auto" aria-label="Industrielle 3D-Animation und CAD-Visualisierung"></video>
 </figure>
 
 <section class="facts" aria-label="Eckdaten">
-  <dl>
+  <dl data-reveal="children">
     <div><dt>Eingabe</dt><dd>STEP · IGES · CATIA · JT · KiCad</dd></div>
     <div><dt>Ausgabe</dt><dd>Stills · Pakete · Animation</dd></div>
     <div><dt>Erste Bewertung</dt><dd>innerhalb von 3 Tagen</dd></div>
@@ -47,7 +48,7 @@
   </dl>
 </section>
 
-<section class="problem">
+<section class="problem" data-reveal="children">
   <h2 class="display-md">Eure Technik ist brillant. Sieht man es ihr auch an?</h2>
   <p>Klassische Agenturen verstehen eure CAD-Daten nicht – also erklärt ihr eure Maschine in jedem Briefing neu. <strong>Bei uns liest die Pipeline Geometrie, Materialien und Baugruppenstruktur direkt aus euren Daten.</strong> Ein Ansprechpartner, der eure Technik schon versteht.</p>
 </section>
@@ -55,9 +56,9 @@
 <div id="cases"></div>
 
 <section class="case case-amp" aria-labelledby="case-amp-title">
-  <div class="container">
+  <div class="container" data-reveal="children">
     <div class="center">
-      <p class="eyebrow">Fallstudie 01 · High-End-Audio</p>
+      <p class="eyebrow">Case Study 01 · High-End-Audio</p>
       <h2 class="display" id="case-amp-title">Röhrenverstärker.</h2>
       <p class="lead">Von der STEP-Baugruppe zum Katalogbild: Front, Anschlussfeld und Innenleben – bevor der erste Prototyp gebaut war.</p>
       <div class="tags center"><span class="tag">Produktrendering</span><span class="tag">Schnittansicht</span><span class="tag">Katalog</span></div>
@@ -75,11 +76,11 @@
 </section>
 
 <section class="case case-motor on-dark" aria-labelledby="case-motor-title">
-  <div class="container">
+  <div class="container" data-reveal="children">
     <div class="intro">
       <div>
-        <p class="eyebrow">Fallstudie 02 · Automotive</p>
-        <h2 class="display" id="case-motor-title">Reihensechs&shy;zylinder.</h2>
+        <p class="eyebrow">Case Study 02 · Automotive</p>
+        <h2 class="display" id="case-motor-title">BrumBrum.</h2>
         <p class="lead">Komplette Motorbaugruppe aus den Konstruktionsdaten – mit Detailaufnahmen von Ansaugtrakt, Riementrieb und Zylinderkopfhaube für Vertrieb und Schulung.</p>
         <div class="tags"><span class="tag">Detailrenderings</span><span class="tag">Schulung</span><span class="tag">Vertrieb</span></div>
       </div>
@@ -94,16 +95,16 @@
 </section>
 
 <section class="case-pcb on-dark on-pcb" aria-labelledby="case-pcb-title">
-  <div class="banner">
+  <div class="banner" data-reveal>
     <img src="img/casestudy_pcb-02.jpg" alt="Prozessor auf Leiterplatte, leuchtende Kontakte" loading="lazy">
     <div class="banner-text">
       <div class="container">
-        <p class="eyebrow">Fallstudie 03 · Elektronik</p>
+        <p class="eyebrow">Case Study 03 · Elektronik</p>
         <h2 class="display" id="case-pcb-title">Controller-Board.</h2>
       </div>
     </div>
   </div>
-  <div class="body">
+  <div class="body" data-reveal="children">
     <div class="intro">
       <p class="lead">KiCad-Layout direkt übernommen, jede Komponente an ihrer Stelle – inszeniert für Produktlaunch und Messewand.</p>
       <div class="tags"><span class="tag">Key Visual</span><span class="tag">Launch</span><span class="tag">Messe</span></div>
@@ -116,7 +117,7 @@
 </section>
 
 <section class="section stats" aria-label="CAD-Vis in Zahlen">
-  <div class="container">
+  <div class="container" data-reveal="children">
     <div><p class="stat-value">3 Tage</p><p class="stat-label">bis zur ersten Datenbewertung</p></div>
     <div><p class="stat-value">1</p><p class="stat-label">Ansprechpartner von Datei bis Lieferung</p></div>
     <div><p class="stat-value">0</p><p class="stat-label">Dateien an Cloud-KI oder Public Cloud</p></div>
@@ -126,59 +127,58 @@
 
 <section class="section bg-surface" id="leistungen">
   <div class="container">
-    <div class="section-head">
-      <h2 class="display">Vier Stufen. Ein Einstieg.</h2>
-      <p class="lead">Jede Stufe baut auf denselben aufbereiteten Daten auf – nichts wird doppelt bezahlt.</p>
+    <div class="section-head" data-reveal>
+      <h2 class="display">Klarer Prozessablauf.</h2>
+      <p class="lead">Jeder Schritt baut auf denselben aufbereiteten Daten auf – nichts wird doppelt bezahlt.</p>
     </div>
     <!-- Prices are hidden for now; remove the `hidden` attribute on .tier-price to show them. -->
-    <div class="tiers">
+    <div class="tiers" data-reveal="children">
       <article class="tier">
-        <p class="tier-step">Stufe 1</p>
+        <p class="tier-step">Schritt 1</p>
         <h3>Datenoptimierung &amp; Stills</h3>
         <p class="tier-desc">CAD-Aufbereitung plus Rendering im gewünschten Stil – Studiolook, dramatisches Licht oder Blueprint. Inkl. Drei-Tage-Datenbewertung.</p>
         <p class="tier-price" hidden>ab 600 € pro Bild</p>
       </article>
       <article class="tier">
-        <p class="tier-step">Stufe 2</p>
+        <p class="tier-step">Schritt 2</p>
         <h3>Rendering-Paket</h3>
         <p class="tier-desc">Ein festes Kontingent individueller Renderings für einen Anlass – Messe, Website-Relaunch, Kampagne.</p>
         <p class="tier-price" hidden>ab 2.500 € pro Paket</p>
       </article>
       <article class="tier">
-        <p class="tier-step">Stufe 3</p>
+        <p class="tier-step">Schritt 3</p>
         <h3>Erkläranimation</h3>
         <p class="tier-desc">Animierter Content, der Produkt, Bauteil oder Ablauf verständlich macht – für Technik- und Laienpublikum.</p>
         <p class="tier-price" hidden>ab 4.500 € pro Film</p>
       </article>
       <article class="tier">
-        <p class="tier-step">Stufe 4</p>
+        <p class="tier-step">Schritt 4</p>
         <h3>Produktdesign &amp; Visualisierung</h3>
         <p class="tier-desc">Gestalterische Mitwirkung an Produktdesign und -visualisierung – über die reine Datenaufbereitung hinaus.</p>
         <p class="tier-price" hidden>auf Anfrage</p>
       </article>
     </div>
-    <p class="note">Preise und Bearbeitungszeiten – außer der Drei-Tage-Bewertung – stimmen wir je Projekt ab.</p>
   </div>
 </section>
 
 <section class="section" id="prozess">
   <div class="container">
-    <div class="section-head">
+    <div class="section-head" data-reveal>
       <h2 class="display">Keine Überraschungen.</h2>
       <p class="lead">Nach drei Tagen wisst ihr, wie euer Projekt läuft. Danach seht ihr jeden Zwischenstand vor der finalen Lieferung.</p>
     </div>
-    <ol class="steps">
+    <ol class="steps" data-reveal="children">
       <li><span class="step-num">01</span><h3>NDA zuerst</h3><p class="small-text">Vorunterzeichnet, ohne Vertragsverhandlung – vor jedem inhaltlichen Austausch.</p></li>
       <li><span class="step-num">02</span><h3>Datenübergabe</h3><p class="small-text">CAD- oder STEP-Dateien über einen geschützten Kanal.</p></li>
-      <li class="is-key"><span class="step-num">03</span><h3>3-Tage-Bewertung</h3><p class="small-text">Geometrie, Materialien, Struktur geprüft – mit Einschätzung zu Aufwand und Stufe.</p></li>
-      <li><span class="step-num">04</span><h3>Umsetzung</h3><p class="small-text">Stills, Pakete, Erklärvideos oder Produktvisualisierung – je nach Stufe.</p></li>
+      <li class="is-key"><span class="step-num">03</span><h3>3-Tage-Bewertung</h3><p class="small-text">Geometrie, Materialien, Struktur geprüft – mit Einschätzung zu Aufwand und Schritt.</p></li>
+      <li><span class="step-num">04</span><h3>Umsetzung</h3><p class="small-text">Stills, Pakete, Erklärvideos oder Produktvisualisierung – je nach Schritt.</p></li>
       <li><span class="step-num">05</span><h3>Freigabe</h3><p class="small-text">Zwischenstände zur Abstimmung, dann alle Formate für Web, Messe und Vertrieb.</p></li>
     </ol>
   </div>
 </section>
 
 <section class="security" aria-labelledby="security-title">
-  <div class="panel">
+  <div class="panel" data-reveal>
     <div class="section-head">
       <p class="eyebrow">KI &amp; Datensicherheit</p>
       <h2 class="display-sm" id="security-title">Eure IP bleibt bei euch.</h2>
@@ -193,7 +193,7 @@
 </section>
 
 <section class="faq" id="faq">
-  <div class="container">
+  <div class="container" data-reveal="children">
     <h2 class="display-sm">Häufige Fragen.</h2>
     <details>
       <summary>Was braucht ihr zum Start?<span aria-hidden="true">+</span></summary>
@@ -201,7 +201,7 @@
     </details>
     <details>
       <summary>Wie schnell wissen wir, woran wir sind?<span aria-hidden="true">+</span></summary>
-      <p>Innerhalb von drei Tagen nach Datenübergabe – mit Einschätzung zu Machbarkeit, Aufwand und passender Stufe.</p>
+      <p>Innerhalb von drei Tagen nach Datenübergabe – mit Einschätzung zu Machbarkeit, Aufwand und passendem Schritt.</p>
     </details>
     <details>
       <summary>Nutzt ihr KI – und wo landen unsere Daten?<span aria-hidden="true">+</span></summary>
@@ -216,12 +216,12 @@
 
 <section class="section bg-surface contact" id="kontakt">
   <div class="container">
-    <div class="center">
-      <h2>Lasst uns reden.</h2>
+    <div class="center" data-reveal>
+      <h2>Lass es angehen.</h2>
       <p class="lead">Datenlage, Deadline, Ziel – wir antworten mit der vorunterzeichneten NDA und den nächsten Schritten.</p>
-      <p class="contact-mail"><a href="mailto:tlmwork@pm.me">tlmwork@pm.me</a></p>
+      <p class="contact-mail"><a href="mailto:thomasludwigwork@pm.me">thomasludwigwork@pm.me</a></p>
     </div>
-    <form class="form" id="contact-form" data-to="tlmwork@pm.me">
+    <form class="form" data-reveal id="contact-form" data-to="thomasludwigwork@pm.me">
       <div class="form-row">
         <div class="field"><label for="f-name">Name</label><input class="input" id="f-name" name="name" type="text" placeholder="Vor- und Nachname" autocomplete="name" required></div>
         <div class="field"><label for="f-firma">Unternehmen</label><input class="input" id="f-firma" name="firma" type="text" placeholder="Firma GmbH" autocomplete="organization"></div>
@@ -231,10 +231,10 @@
         <label for="f-stufe">Leistung</label>
         <select class="input" id="f-stufe" name="leistung">
           <option>Noch unsicher – Beratung gewünscht</option>
-          <option>Stufe 1 · Datenoptimierung &amp; Stills</option>
-          <option>Stufe 2 · Rendering-Paket</option>
-          <option>Stufe 3 · Erkläranimation</option>
-          <option>Stufe 4 · Produktdesign &amp; Visualisierung</option>
+          <option>Schritt 1 · Datenoptimierung &amp; Stills</option>
+          <option>Schritt 2 · Rendering-Paket</option>
+          <option>Schritt 3 · Erkläranimation</option>
+          <option>Schritt 4 · Produktdesign &amp; Visualisierung</option>
         </select>
       </div>
       <div class="field"><label for="f-msg">CAD-Format &amp; Projekt</label><textarea class="input" id="f-msg" name="nachricht" rows="4" placeholder="z. B. STEP-Baugruppe, Messe im März, 6 Stills + kurzer Film"></textarea></div>
@@ -243,7 +243,7 @@
   </div>
 </section>
 
-<section class="section brand" aria-labelledby="brand-title">
+<section class="section brand" aria-labelledby="brand-title" data-reveal="children">
   <p class="eyebrow">Über die Visualisierung hinaus</p>
   <h2 class="display-md" id="brand-title">Ihr wollt eure Marke ganzheitlich neu definieren?</h2>
   <p class="lead">Wir arbeiten mit eingespielten Partner-Teams zusammen und gestalten euren gesamten Auftritt neu – von der Markenstrategie über Website und Messestand bis zum Produktvisual.</p>

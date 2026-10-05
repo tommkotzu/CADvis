@@ -70,3 +70,26 @@
     button.textContent = 'Danke – wir melden uns';
   });
 })();
+
+// Scroll reveal: elements marked data-reveal (or the children of
+// data-reveal="children") fade in and rise as they enter the viewport.
+// Elements that appear together are staggered slightly.
+(() => {
+  if (!document.documentElement.classList.contains('motion')) return;
+  const targets = document.querySelectorAll('[data-reveal]:not([data-reveal="children"]), [data-reveal="children"] > *');
+
+  const io = new IntersectionObserver((entries) => {
+    let i = 0;
+    for (const entry of entries) {
+      if (!entry.isIntersecting) continue;
+      const el = entry.target;
+      el.style.setProperty('--reveal-delay', `${Math.min(i++, 5) * 90}ms`);
+      el.classList.add('is-revealed');
+      // Drop the delay afterwards so hover transitions aren't held back.
+      el.addEventListener('transitionend', () => el.style.removeProperty('--reveal-delay'), { once: true });
+      io.unobserve(el);
+    }
+  }, { rootMargin: '0px 0px -8% 0px' });
+
+  targets.forEach((el) => io.observe(el));
+})();
