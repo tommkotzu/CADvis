@@ -195,12 +195,6 @@ a:hover { color: var(--color-accent-600); text-decoration: underline; }
 .rounded { border-radius: var(--radius-lg); }
 .cover { width: 100%; object-fit: cover; }
 
-.case-amp { background: var(--color-surface); }
-.case-amp .grid-420 { margin-top: 48px; }
-.case-amp .grid-300 { margin-top: 12px; }
-.case-amp .strip { width: 100%; aspect-ratio: 3 / 1; object-fit: cover; object-position: center 85%; }
-.case-amp .square { width: 100%; aspect-ratio: 1 / 1; object-fit: contain; }
-.case-amp .square.cover { object-fit: cover; }
 
 .on-dark { color: var(--color-neutral-100); }
 .on-dark .eyebrow { color: var(--color-accent-300); }
@@ -213,7 +207,9 @@ a:hover { color: var(--color-accent-600); text-decoration: underline; }
 }
 .case-motor .lead { margin: 18px 0 0; max-width: 40ch; }
 .case-motor .grid-260 { margin-top: 48px; }
-.case-motor .grid-260 img { aspect-ratio: 4 / 5; }
+.case-motor .grid-260 img { aspect-ratio: 1 / 1; }
+.case-motor .intro img { width: 100%; }
+.case-motor .exploded { width: 100%; margin-top: 12px; }
 
 .case-pcb { background: var(--ground-pcb); }
 .case-pcb .banner { position: relative; }
