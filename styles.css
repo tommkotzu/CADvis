@@ -25,7 +25,7 @@
   --color-accent-600: #796cbf;
   --color-accent-700: #5d5294;
 
-  --ground-motor: #444243;
+  --ground-motor: linear-gradient(180deg, #000 0%, #0b1218 45%, #2b4252 100%); /* follows the renders: black top, steel-blue bottom */
   --ground-pcb: #121519;
 
   --text-muted: color-mix(in srgb, var(--color-text) 72%, transparent);
