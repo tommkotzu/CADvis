@@ -274,7 +274,7 @@ a:hover { color: var(--color-accent-600); text-decoration: underline; }
 .security-grid h3 { font-size: 18px; margin: 0 0 6px; }
 
 /* FAQ */
-.faq { padding: 0 var(--gutter) clamp(96px, 12vw, 144px); }
+.faq { padding: clamp(96px, 12vw, 144px) var(--gutter); }
 .faq .container { max-width: 760px; }
 .faq h2 { margin: 0 0 40px; text-align: center; }
 .faq details { padding: 22px 0; box-shadow: inset 0 1px 0 var(--color-divider); }
