@@ -34,6 +34,6 @@ All paths are relative, so the site works under the `/CADvis/` sub-path without 
 ## Before going live
 
 - **Image and video rights:** the case-study images and `hero.mp4` come from third-party portfolio work. Replace them or get permission before publishing.
-- **Contact form:** there is no backend yet. Submitting opens a prefilled e-mail to `thomasludwigwork@pm.me`. To use a form service such as Formspree, add `action` and `method="post"` to `#contact-form`; the JS then steps aside.
+- **Contact form:** there is no backend yet. Submitting opens a prefilled e-mail to `CAD-vis.design@pm.me`. To use a form service such as Formspree, add `action` and `method="post"` to `#contact-form`; the JS then steps aside.
 - **Prices:** hidden. Remove the `hidden` attribute on the `.tier-price` elements to show them. The amounts are still placeholders.
 - **Impressum / Datenschutz:** fill in every `[placeholder]` in `impressum.html` and `datenschutz.html`: name, address, phone, VAT status, supervisory authority, image credits.
